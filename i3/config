@@ -71,6 +71,10 @@ bindsym $mod+e exec --no-startup-id "nemo"
 bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipboard -t image/png && notify-send -t 3000 "Maim" "Screenshot saved to clipboard"
 bindsym $mod+Control+Shift+s exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send -t 3000 "Maim" "Screenshot saved to clipboard"
 
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
