@@ -1,0 +1,35 @@
+source $HOME/.antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle command-not-found
+antigen bundle fzf
+antigen bundle git
+antigen bundle heroku
+antigen bundle lein
+antigen bundle pip
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen apply
+
+alias j="z"
+alias jj="zi"
+alias l="eza --long --git"
+alias ll="eza --long --header --all --git"
+alias lz="lazygit"
+alias src="source $HOME/.zshrc"
+alias v="nvim"
+alias zshrc="nvim $HOME/.zshrc"
+
+export GITHUB_USERNAME="cultofleda"
+export HOMEBREW_NO_ENV_HINTS=1
+export VOLTA_FEATURE_PNPM=1
+export VOLTA_HOME="$HOME/.volta"
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
